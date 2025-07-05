@@ -3,20 +3,23 @@ import SidebarLeft from "../components/SidebarLeft";
 import SidebarRight from "../components/SidebarRight";
 import MapViewer from "../components/MapViewer";
 
-export default function MapViewerPage() {
+const MapViewerPage = () => {
+  const coordinates = ["-1.4356, 98.6162", "-4.3892, 103.6521", "-6.4352, 108.2736"];
+  const locations = ["STA-001", "STA-034", "STA-012"];
+
   return (
-    <div className="flex flex-col md:flex-row h-[calc(100vh-4rem)]">
-      {" "}
-      {/* 4rem untuk tinggi Navbar */}
-      <div className="w-full md:w-1/4 bg-white border-r overflow-y-auto">
-        <SidebarLeft />
+    <div className="grid grid-cols-12 gap-4 p-4 bg-gradient-to-br from-green-100 to-teal-50 min-h-screen">
+      <div className="col-span-2">
+        <SidebarLeft coordinates={coordinates} />
       </div>
-      <div className="w-full md:w-2/4 bg-gray-100 relative">
+      <div className="col-span-7">
         <MapViewer />
       </div>
-      <div className="w-full md:w-1/4 bg-white border-l overflow-y-auto">
-        <SidebarRight />
+      <div className="col-span-3">
+        <SidebarRight locations={locations} />
       </div>
     </div>
   );
-}
+};
+
+export default MapViewerPage;

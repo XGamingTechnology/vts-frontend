@@ -1,8 +1,11 @@
-export default function InputData() {
+import React from "react";
+
+const InputData = () => {
   return (
-    <div className="p-6">
-      <h2 className="text-xl font-bold text-primary mb-4">Form Input Data</h2>
-      <p className="text-gray-600">Halaman ini akan berisi form input koordinat dan unggah CSV.</p>
+    <div className="p-4">
+      <h1 className="text-xl font-bold">Halaman Input Data</h1>
     </div>
   );
-}
+};
+
+export default InputData;

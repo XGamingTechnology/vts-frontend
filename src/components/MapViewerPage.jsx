@@ -1,13 +1,11 @@
-import SidebarLeft from "../components/SidebarLeft";
-import MapViewer from "../components/MapViewer";
-import SidebarRight from "../components/SidebarRight";
+import React from "react";
 
-export default function MapViewerPage() {
+const MapViewerPage = () => {
   return (
-    <div className="flex h-[calc(100vh_-_64px)] w-full overflow-hidden bg-white">
-      <SidebarLeft />
-      <MapViewer />
-      <SidebarRight />
+    <div className="p-4">
+      <h1 className="text-xl font-bold">Map Viewer Page</h1>
     </div>
   );
-}
+};
+
+export default MapViewerPage;

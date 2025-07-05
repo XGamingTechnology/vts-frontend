@@ -1,3 +1,7 @@
-export default function MainLayout({ children }) {
-  return <main className="flex-1 overflow-hidden">{children}</main>;
-}
+import React from "react";
+
+const MainLayout = ({ children }) => {
+  return <div className="min-h-screen bg-gray-50">{children}</div>;
+};
+
+export default MainLayout;
